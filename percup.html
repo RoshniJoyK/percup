@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <style>
+        header {
+            display: flex;
+        }
+
+        .top {
+            background-color: brown;
+            color: white;
+            text-align: center;
+            height: 25px;
+            width: 100%;
+        }
+
+        .menubar {
+            width: 35px;
+            height: 2px;
+            background-color: black;
+            margin: 6px;
+            position: relative;
+            left: 100px;
+        }
+
+        .percupImage {
+            height: 90px;
+            width: 160px;
+            margin: auto;
+            position: relative;
+            top: 20px;
+            margin-top: -20px;
+        }
+
+        .iconHead {
+            position: relative;
+            right: 80px;
+            margin-top: 20px;
+        }
+
+        .menu {
+            margin-top: 20px;
+        }
+
+        .mainImage {
+            height: 350px;
+            width: 100%;
+        }
+
+        .mainImageDup {
+            height: 350px;
+            width: 100%;
+            display: none;
+        }
+
+        #percupBlankHead {
+
+            margin-top: 20px;
+        }
+
+        .percupText {
+            position: absolute;
+            top: 200px;
+            left: 150px;
+            color: white;
+            font-size: 50px;
+        }
+
+        main {
+            background-color: burlywood;
+            height: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            margin: 60px;
+            position: relative;
+
+        }
+
+        .secionRightImage {
+            height: 400px;
+            width: 350px;
+        }
+
+        .sectionText {
+            width: 350px;
+        }
+
+        .sectionTextFull {
+            width: 235px;
+            margin: 0 auto;
+        }
+
+        .sectionImage {
+            width: 560px;
+        }
+
+        .sectionImageDup {
+            display: none;
+        }
+
+        .secionLeftImage {
+            height: 400px;
+            width: 350px;
+        }
+
+        .sectionTextFull2 {
+            width: 530px;
+
+        }
+
+        .sectionImage2 {
+            width: 285px;
+            margin: 0 auto;
+        }
+
+        .sectionImage2Dup {
+            display: none;
+        }
+
+        .sectionLastImageDup {
+            display: none;
+        }
+
+        .cardSection {
+            display: flex;
+            margin: 30px auto;
+            width: 1100px;
+        }
+
+        .lastSection {
+            display: flex;
+            margin: 60px;
+            position: relative;
+        }
+
+        footer {
+            display: flex;
+            height: 200px;
+            width: 1200px;
+            background-color: bisque;
+            margin: 0 auto;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .percupImageFoot {
+            height: 50px;
+            width: 120px;
+            margin: auto;
+            position: relative;
+            bottom: 40px;
+
+        }
+
+        .foot1 {
+            width: 400px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .foot2 {
+            width: 500px;
+            margin: 30px auto;
+        }
+
+        .foot3 {
+            width: 200px;
+            margin: 30px auto;
+        }
+
+        .foot4 {
+            width: 200px;
+            margin: 30px auto;
+        }
+
+        .foot5 {
+            width: 200px;
+            margin: 30px auto;
+        }
+
+        .iconSection {
+            text-align: center;
+            height: 200px;
+            width: 1200px;
+            background-color: bisque;
+            margin: 0 auto;
+        }
+
+        .icons {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .subicons {
+            display: flex;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 800px) {
+            .percupImage {
+                height: 70px;
+                width: 134px;
+                position: relative;
+                top: 19px;
+            }
+
+            .menubar {
+                position: relative;
+                left: 20px;
+            }
+
+            .menu {
+                margin-top: 10px;
+            }
+
+            #Icon_feather-search {
+                display: none;
+            }
+
+            .iconHead {
+                position: relative;
+                right: 24px;
+                margin-top: 10px;
+            }
+
+            .mainImageDiv {
+                height: 230px;
+            }
+
+            .mainImage {
+                height: 100%;
+                display: none;
+            }
+
+            .mainImageDup {
+                height: 100%;
+                width: 100%;
+                display: flex;
+            }
+
+            .percupText {
+                position: relative;
+                top: -165px;
+                left: 22px;
+                width: 300px;
+                color: white;
+                font-size: 33px;
+            }
+
+            .mainSection {
+                width: 100% !important;
+                margin: -78px auto !important;
+            }
+
+            .percupBlank {
+                height: 20px !important;
+                width: 65px !important;
+            }
+
+            #percupBlankHead {
+                width: 270px;
+                margin: 20px auto !important;
+                font-size: 21px;
+                margin-top: 20px;
+            }
+
+            #percupBlankPara {
+                width: 300px;
+                margin: 20px auto !important;
+                font-size: 15px;
+            }
+
+            .texta {
+                margin: 0 auto;
+                font-size: 20px !important;
+                width: 300px;
+
+            }
+
+            .textb {
+
+                font-size: 14px !important;
+                width: 300px;
+                position: relative;
+                top: 90px;
+            }
+
+            .textc {
+                display: none;
+            }
+
+            .sectionImage {
+                margin: 20px auto !important;
+                width: 315px;
+                display: none;
+            }
+
+
+            .sectionImageDup {
+                height: 140px;
+                width: 300px;
+                display: block;
+                object-fit: cover;
+            }
+
+            section {
+                display: block;
+                margin: 0px !important;
+            }
+
+            .secionRightImage {
+                height: 140px;
+                width: 300px;
+                margin: 20px auto !important;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+
+            .sectionTextFull {
+                width: 300px;
+                text-align: center;
+                margin: 20px auto !important;
+            }
+
+            .buttona {
+                margin: 20px auto !important;
+                position: relative;
+                top: 90px;
+                padding-left: 75px !important;
+                padding-right: 75px !important;
+            }
+
+            .icons {
+                display: block;
+            }
+
+            .subicons {
+                display: block;
+                width: 200px !important;
+                padding: 0px !important;
+            }
+
+            .iconSection {
+                height: 420px;
+                width: 300px;
+
+
+            }
+
+            .icontext {
+                width: 300px !important;
+                font-size: 20px;
+            }
+
+            .secionLeftImage {
+                height: 140px;
+                width: 300px;
+                margin: 20px auto !important;
+                object-fit: cover !important;
+                border-radius: 10px;
+            }
+
+            .secionRightImage {
+                height: 175px;
+                width: 300px;
+                margin-left: 6px;
+            }
+
+            .sectionImage {
+                margin: 0px auto !important;
+            }
+
+            .sectionImage2 {
+                width: 285px;
+                margin: 0 auto;
+                display: none;
+            }
+
+
+            .sectionImage2Dup {
+                height: 140px;
+                width: 300px;
+                margin: 20px auto;
+                display: block;
+
+            }
+
+            .textbb {
+                margin: 50px auto !important;
+                font-size: 14px !important;
+                width: 300px;
+            }
+
+            .buttonaa {
+                padding-left: 75px !important;
+                padding-right: 75px !important;
+                position: relative;
+                bottom: 20px;
+            }
+
+            .sectionTextFull2 {
+                width: 300px;
+                text-align: center;
+                margin: 0 auto !important;
+            }
+
+            .sectionText {
+                width: 300px;
+                height: 550px;
+                margin: 30px auto !important;
+            }
+
+            .cardHeading {
+                width: 300px !important;
+                font-size: 22px !important;
+                margin: 20px auto !important;
+            }
+
+            .cardSection {
+                display: block !important;
+                width: 315px;
+            }
+
+            .card {
+                height: 150px !important;
+                margin-bottom: 20px !important;
+
+            }
+
+            .card-text {
+                display: none;
+            }
+
+            .card-body {
+                margin-top: 25px !important;
+            }
+
+            .lastSection {
+                display: block;
+                height: 800px;
+                width: 300px !important;
+                margin: 0 auto !important;
+            }
+
+            .lastSectionHead {
+                width: 300px;
+                font-size: 23px !important;
+            }
+
+            .lastSectionDesc {
+                font-size: 17px !important;
+                width: 300px;
+            }
+
+            .buttonlast {
+                padding-left: 75px !important;
+                padding-right: 75px !important;
+                margin: 20px auto;
+            }
+
+            .sectionLastImageDup {
+                display: block;
+                width: 285px;
+                height: 160px;
+                margin: 20px auto;
+                margin-right: 20px;
+            }
+
+            .secionLastImage {
+                width: 300px;
+                height: 160px;
+                margin: 20px auto !important;
+                object-fit: cover !important;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+
+            footer {
+                display: block;
+                width: 315px;
+                height: 600px;
+            }
+
+            .lastBorder {
+                width: 315px !important;
+            }
+
+            .foot1 {
+                width: 300px !important;
+                margin-bottom: -60px !important;
+                margin: 10px auto !important;
+                text-align: center !important;
+            }
+
+            .foot2 {
+                width: 300px !important;
+                margin: 0 auto !important;
+                text-align: center;
+
+            }
+
+            .foot3 {
+                width: 300px !important;
+                text-align: center;
+            }
+
+            .foot4 {
+                width: 300px !important;
+                text-align: center;
+            }
+
+            .foot5 {
+                width: 300px !important;
+                text-align: center;
+            }
+
+            .instagram {
+                display: none;
+            }
+
+            .terms {
+                display: none;
+            }
+
+            .foot2Para {
+                width: 300px !important;
+            }
+
+            .email {
+                padding-left: 70px !important;
+                padding-right: 70px !important;
+            }
+
+            .percupImageFootDiv {
+                width: 300px;
+                height: 100px;
+                margin: 0 auto;
+            }
+
+        }
+
+
+
+        @media screen and (max-width: 3000px) and (min-width: 800px) {
+
+            main {
+                height: 565px;
+
+            }
+
+            .menubar {
+                position: relative;
+                left: 60px;
+            }
+
+            .percupText {
+                position: absolute;
+                top: 200px;
+                left: 93px;
+                color: white;
+                font-size: 50px;
+            }
+
+            .secionRightImage {
+                height: 350px;
+                width: 271px;
+            }
+
+            .sectionImage {
+                width: 385px;
+                margin-left: 73px;
+            }
+
+            .sectionText {
+                width: 325px;
+
+            }
+
+            .texta {
+                font-size: 17px !important;
+            }
+
+            .textb {
+                font-size: 13px !important;
+            }
+
+            .textc {
+                font-size: 13px !important;
+            }
+
+            .sectionTextFull2 {
+                width: 430px;
+            }
+
+            .secionLeftImage {
+                height: 350px;
+                width: 271px;
+            }
+
+            .sectionImage2 {
+                width: 330px;
+            }
+
+            section {
+                width: 1082px;
+                margin: 60px auto !important;
+            }
+
+            .mainImage {
+                height: 307px;
+                width: 100%;
+            }
+
+            .mainSection {
+                width: 660px !important;
+                margin: 20px auto !important;
+            }
+
+            #percupBlankHead {
+                font-size: 21px;
+                width: 550px;
+                margin: 20px auto;
+            }
+
+            #percupBlankPara {
+                font-size: 12px;
+                margin: 20px auto;
+                width: 593px;
+            }
+
+            .cardHeading {
+                margin: 30px auto !important;
+            }
+
+            .iconSection {
+                width: 1100px;
+            }
+
+            .cardSection {
+                width: 1100px;
+            }
+
+            .card {
+                width: 250px !important;
+                margin: 60px auto !important;
+            }
+
+            footer {
+                width: 1100px;
+                margin: 60px auto !important;
+            }
+
+        
+            .lastSection {
+                width: 1100px;
+                margin: 30px auto !important;
+            }
+
+            .lastBorder {
+                width: 1100px !important;
+            }
+        }
+
+        @media screen and (max-width: 1200px) and (min-width: 800px) {
+            section {
+                width: 816px !important;
+                margin: 60px auto !important;
+            }
+            .iconSection {
+    width: 816px;
+}
+.sectionTextFull2 {
+    width: 424px;
+}
+.sectionImage2 {
+    width: 252px;
+}
+.cardSection {
+    width: 816px;
+}
+.lastSection {
+    width: 816px;
+    margin: 30px auto !important;
+}
+footer {
+    width: 816px;
+    margin: 60px auto !important;
+}
+.lastBorder {
+    width: 816px !important;
+}
+      
+.foot5,.foot4,.foot3 {
+    width: 100px;
+    margin: 30px auto;
+    margin-left:20px;
+}
+}
+
+        @media screen and (max-width: 3000px) and (min-width: 1200px) {
+            .sectionTextFull {
+    width: 345px;
+}
+
+.sectionImage {
+    width: 494px;
+    margin-left: -140px;
+}
+section {
+    width: 1082px;
+    margin: 60px auto !important;
+}
+.sectionTextFull2 {
+    width: 558px;
+}
+.sectionImage2 {
+    width: 271px;
+    margin-left: 192px;
+}
+.card {
+    width: 325px !important;
+    margin: 60px auto !important;
+}
+
+
+     }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        Free international shipping on orders over $100*</div>
+
+    <header>
+        <div class="menu">
+            <div class="menubar"></div>
+            <div class="menubar"></div>
+            <div class="menubar"></div>
+        </div>
+
+        <img class="percupImage" src="images/percup.png">
+
+        <div class="iconHead">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30.266" height="30.266" viewBox="0 0 30.266 30.266">
+                <g id="Icon_feather-search" data-name="Icon feather-search" transform="translate(-14 -14)">
+                    <path id="Path_968" data-name="Path 968"
+                        d="M39.757,27.379A12.379,12.379,0,1,1,27.379,15,12.379,12.379,0,0,1,39.757,27.379Z"
+                        transform="translate(0 0)" fill="none" stroke="#382722" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_969" data-name="Path 969" d="M89.981,89.981,83.25,83.25"
+                        transform="translate(-47.129 -47.129)" fill="none" stroke="#382722" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                </g>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="33.171" height="31.754" viewBox="0 0 33.171 31.754">
+                <g id="Icon_feather-shopping-cart" data-name="Icon feather-shopping-cart" transform="translate(1 1)">
+                    <path id="Path_657" data-name="Path 657"
+                        d="M14.834,31.417A1.417,1.417,0,1,1,13.417,30,1.417,1.417,0,0,1,14.834,31.417Z"
+                        transform="translate(-2.082 -3.079)" fill="none" stroke="#382722" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_658" data-name="Path 658"
+                        d="M31.334,31.417A1.417,1.417,0,1,1,29.917,30,1.417,1.417,0,0,1,31.334,31.417Z"
+                        transform="translate(-2.996 -3.079)" fill="none" stroke="#382722" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_659" data-name="Path 659"
+                        d="M1.5,1.5H7.168l3.8,18.972A2.834,2.834,0,0,0,13.8,22.753H27.571A2.834,2.834,0,0,0,30.4,20.472L32.671,8.584H8.584"
+                        transform="translate(-1.5 -1.5)" fill="none" stroke="#382722" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                </g>
+            </svg>
+
+        </div>
+    </header>
+    <main>
+        <div class="mainImageDiv">
+            <img class="mainImage" src="images/mainImage.png">
+            <img class="mainImageDup" src="images/mainImage.png">
+        </div>
+        <p class="percupText">Perk up with PERCUP</p>
+        <div class="mainSection" style="width:750px;color: white;margin:35px auto;">
+            <img class="percupBlank" style="height: 30px;width:80px;" src="images/percupBlank.png">
+            <h2 id="percupBlankHead">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut</h2>
+
+            <p id="percupBlankPara">Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores ea.</p>
+        </div>
+    </main>
+    <section>
+
+
+        <div class="sectionTextFull">
+            <div class="sectionText">
+                <p class="texta" style="font-size: 25px;margin-top: 0px;">Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et</p>
+
+                <div class="sectionImageDup"><img class="secionRightImage" src="images/secionRightImage.png"></div>
+
+                <p class="textb" style="font-size: 13px;">Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p class="textc" style="font-size: 13px;">Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea.</p>
+                <button class="buttona" style="background-color: brown;color:white;border-radius: 5px;border:none;padding-left: 30px;
+        padding-right: 30px;padding-top:10px;padding-bottom:10px;">Shop all</button>
+            </div>
+        </div>
+        <div class="sectionImage"><img class="secionRightImage" src="images/secionRightImage.png"></div>
+
+
+    </section>
+
+    <div class="iconSection">
+
+        <h4 class="icontext" style="width:650px;margin:0 auto;padding-top:30px;">PERCUP makes all of your favourite
+            beverages available
+            to buy and be delivered asap</h4>
+        <div class="icons">
+            <div class="subicons" style="width:400px;margin:20px auto;padding-left: 50px;"><img
+                    style="height:20px;width:20px;" src="images/icon1.png">
+                <div>Sustainably sourced</div>
+            </div>
+            <div class="subicons" style="width:450px;margin:20px auto;padding-left: 50px;"><img
+                    style="height:20px;width:20px;" src="images/icon2.png">
+                <div>Only the best Arabica & Robusta beans</div>
+            </div>
+            <div class="subicons" style="width:400px;margin:20px auto;padding-left: 50px;"><img
+                    style="height:20px;width:20px;" src="images/icon3.png">
+                <div>Subscriptions to suit you</div>
+            </div>
+            <div class="subicons" style="width:400px;margin:20px auto;padding-left: 50px;"><img
+                    style="height:20px;width:20px;" src="images/icon4.png">
+                <div>Delivery within 2-4 days</div>
+            </div>
+        </div>
+
+    </div>
+
+    <section>
+
+        <div class="sectionImage2"><img class="secionLeftImage" src="images/sectionLeftImage.png"></div>
+
+        <div class="sectionTextFull2">
+            <div class="sectionText">
+                <p class="texta" style="font-size: 25px;margin-top: 0px;">Lorem ipsum dolor sit amet, consetetur
+                    sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et</p>
+
+                <div class="sectionImage2Dup"><img class="secionLeftImage" src="images/sectionLeftImage.png"></div>
+
+                <p class="textbb" style="font-size: 13px;">Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p class="textc" style="font-size: 13px;">Lorem ipsum dolor sit amet,consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea.</p>
+                <button class="buttonaa" style="background-color: brown;color:white;border-radius: 5px;border:none;padding-left: 30px;
+        padding-right: 30px;padding-top:10px;padding-bottom:10px;">Shop all</button>
+            </div>
+        </div>
+
+    </section>
+
+    <h4 class="cardHeading" style="color:brown;width:600px;font-size: 25px;margin: auto;text-align: center;">PERCUP
+        brings all of the
+        world's best beverages and makes them available to you</h4>
+
+    <div class="cardSection">
+        <div class="card" style="width:300px;height:300px;background-image: url('images/card1.png');
+    background-repeat: no-repeat;background-size: cover;margin:auto;">
+            <div class="card-body" style="margin-top: 100px;color:white;">
+                <h5 class="card-title">Coffee</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod</p>
+                <button class="btn" style="background-color: burlywood;color:white">Shop now</button>
+            </div>
+        </div>
+
+        <div class="card" style="width:300px;height:300px;background-image: url('images/card2.png');
+  background-repeat: no-repeat;background-size: cover;margin:auto;">
+            <div class="card-body" style="margin-top: 100px;color:white;">
+                <h5 class="card-title">Tea</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod</p>
+                <button class="btn" style="background-color: burlywood;color:white">Shop now</button>
+            </div>
+        </div>
+
+        <div class="card" style="width:300px;height:300px;background-image: url('images/card3.png');
+  background-repeat: no-repeat;background-size: cover;margin:auto;">
+            <div class="card-body" style="margin-top: 100px;color:white;">
+                <h5 class="card-title">Matcha</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod</p>
+                <button class="btn" style="background-color: burlywood;color:white">Shop now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lastSection">
+
+        <div class="sectionImage2"><img class="secionLeftImage" src="images/lastSectionImage.png"></div>
+
+        <div class="sectionTextFull2">
+            <div class="sectionText">
+                <p class="lastSectionHead" style="font-size: 25px;margin-top: 0px;color:brown;">Subscribe & save with
+                    PERCUP on all your
+                    favourite</p>
+                <p class="lastSectionTitle" style="font-size: 13px;color: burlywood;">SUBSCRIBE AND SAVE</p>
+                <p class="lastSectionDesc" style="font-size: 12px;">Save upto 15% on every subscription meaning you get
+                    your favourites for less
+                </p>
+
+                <p class="lastSectionTitle" style="font-size: 13px;color: burlywood;">LOREM IPSUM</p>
+                <p class="lastSectionDesc" style="font-size: 12px;">Lorem ipsum dolor sit amet,consetetur sadipscing
+                    elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+
+                <p class="lastSectionTitle" style="font-size: 13px;color: burlywood;">LOREM IPSUM</p>
+                <p class="lastSectionDesc" style="font-size: 12px;">Lorem ipsum dolor sit amet,consetetur sadipscing
+                    elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et.</p>
+
+                <button class="buttonlast" style="background-color: brown;color:white;border-radius: 5px;border:none;padding-left: 30px;
+        padding-right: 30px;padding-top:10px;padding-bottom:10px;">Shop all</button>
+
+                <div class="sectionLastImageDup"><img class="secionLastImage" src="images/lastSectionImage.png"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="foot1">
+            <div class="percupImageFootDiv" style="width:250px;">
+                <img class="percupImageFoot" src="images/percup.png">
+                <p>The world's only online market place for caffineated beverages</p>
+                <img class="instagram" style="height:20px;width:20px;" src="images/instagram.png"><br><br>
+                <div class="terms"><u><a>T&C's</a></u> <u><a> Privacy Policy</a></u></div>
+            </div>
+        </div>
+
+        <div class="foot2">
+            <p>Sign up for first access and save 10%</p>
+            <button class="email" style="background-color: bisque;color:brown;border-color: brown;border-radius: 10px;
+        padding-left: 100px;padding-right: 100px;">Email address<img style="height:10px;width:30px;"
+                    src="images/arrow.png"></button>
+            <br>
+            <div class="foot2Para" style="width:300px;margin-top: 10px;">
+                <p> No spam,just first access to new product drops, tips on experimenting with coffee in your kitchen ,
+                    and a doss of coffee culture.</p>
+
+            </div>
+
+        </div>
+
+        <div class="foot3">
+            <p>Coffee</p>
+            <p>Tea</p>
+            <p>Matcha</p>
+        </div>
+
+        <div class="foot4">
+            <p>Account</p>
+            <p>FAQs</p>
+            <p>Contact Us</p>
+        </div>
+
+        <div class="foot5">
+            <p>About PERCUP</p>
+            <p>A-Z of Brands</p>
+        </div>
+    </footer>
+    <div class="lastBorder" style="border:1px solid brown;width:1300px;margin:20px auto;"></div>
+</body>
+
+</html>
